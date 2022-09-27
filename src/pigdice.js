@@ -1,7 +1,9 @@
-export default function Player(name, playerNumber) {
-  this.playerName = name;
-  this.playerNumber = playerNumber;
-  this.currentscore = 0;
-  this.lastRoll = 0;
+export default function Player() {
+  this.rollResult = 0; 
 }
 
+Player.prototype.diceRoll = function() {
+  let rollResult = Math.floor(Math.random() * 6 + 1);
+  //this.lastRoll = rollResult;
+  return(rollResult);
+};
